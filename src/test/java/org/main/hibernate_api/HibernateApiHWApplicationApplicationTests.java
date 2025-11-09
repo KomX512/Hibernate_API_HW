@@ -1,10 +1,10 @@
-package org.main.jdbc_api;
+package org.main.hibernate_api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class JdbcApiNetologyApplicationTests {
+class HibernateApiHWApplicationApplicationTests {
 
     @Test
     void contextLoads() {

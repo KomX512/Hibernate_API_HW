@@ -1,13 +1,13 @@
-package org.main.jdbc_api;
+package org.main.hibernate_api;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class JdbcApiHWApplication {
+public class HibernateApiHWApplication {
 
     public static void main(String[] args){
-        SpringApplication.run(JdbcApiHWApplication.class, args);
+        SpringApplication.run(HibernateApiHWApplication.class, args);
     }
 
 }

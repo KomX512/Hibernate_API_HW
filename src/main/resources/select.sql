@@ -1,1 +1,0 @@
-SELECT product_name FROM public.ORDERS o JOIN public.CUSTOMERS c ON o.customer_id = c.id WHERE LOWER(c.name) = :Name;
