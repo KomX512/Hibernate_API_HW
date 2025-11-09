@@ -1,1 +1,1 @@
-Домашнее задание JDBC
+Домашнее задание к занятию «ORM, Hibernate, Entity Lifecycle, Embedding, Relationships»
