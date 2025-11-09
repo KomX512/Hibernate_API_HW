@@ -38,7 +38,7 @@ public class Person {
         this.surname = surname;
         this.age = age;
         this.phoneNumber = phoneNumber;
-        this.cityOfLiving = cityOfLiving;
+        this.cityOfLiving = cityOfLiving.toUpperCase();
     }
 
     @Override
