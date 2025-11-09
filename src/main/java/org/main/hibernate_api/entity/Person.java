@@ -6,7 +6,6 @@ import lombok.Setter;
 
 @Entity
 @Table(name = "PERSONS")
-@IdClass(PersonId.class)
 @Getter
 @Setter
 
@@ -30,8 +29,8 @@ public class Person {
     @Column(name = "city_of_living", nullable = false)
     private String cityOfLiving;
 
-    // Конструкторы
-    public Person() {}
+    public Person() {
+    }
 
     public Person(String name, String surname, Integer age, String phoneNumber, String cityOfLiving) {
         this.name = name;
