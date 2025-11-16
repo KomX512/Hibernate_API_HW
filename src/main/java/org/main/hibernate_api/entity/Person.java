@@ -4,11 +4,14 @@ import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
+import java.io.Serializable;
+import java.util.Objects;
+
 @Entity
 @Table(name = "PERSONS")
 @Getter
 @Setter
-
+@IdClass(Person.PersonId.class)
 public class Person {
 
     @Id
@@ -38,6 +41,39 @@ public class Person {
         this.age = age;
         this.phoneNumber = phoneNumber;
         this.cityOfLiving = cityOfLiving.toUpperCase();
+    }
+
+    // Статический класс для составного ключа
+    @Getter
+    @Setter
+    public static class PersonId implements Serializable {
+        private String name;
+        private String surname;
+        private Integer age;
+
+        public PersonId() {
+        }
+
+        public PersonId(String name, String surname, Integer age) {
+            this.name = name;
+            this.surname = surname;
+            this.age = age;
+        }
+
+        @Override
+        public boolean equals(Object o) {
+            if (this == o) return true;
+            if (o == null || getClass() != o.getClass()) return false;
+            PersonId personId = (PersonId) o;
+            return Objects.equals(name, personId.name) &&
+                    Objects.equals(surname, personId.surname) &&
+                    Objects.equals(age, personId.age);
+        }
+
+        @Override
+        public int hashCode() {
+            return Objects.hash(name, surname, age);
+        }
     }
 
     @Override
