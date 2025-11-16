@@ -43,7 +43,7 @@ public class Person {
         this.cityOfLiving = cityOfLiving.toUpperCase();
     }
 
-    // Статический класс для составного ключа
+    // Это типа ключ...
     @Getter
     @Setter
     public static class PersonId implements Serializable {
